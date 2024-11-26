@@ -1,8 +1,8 @@
 
-obj-m = ans1.o
+obj-m = pchar.o
 
 
-ans1.ko: ans1.c
+pchar.ko: pchar.c
 	make -C /lib/modules/$$(uname -r)/build M=$$(pwd) modules
 
 clean:

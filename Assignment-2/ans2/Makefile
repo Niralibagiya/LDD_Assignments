@@ -1,8 +1,8 @@
 
-obj-m = ans1.o
+obj-m = ans2.o
 
 
-ans1.ko: ans1.c
+ans2.ko: ans2.c
 	make -C /lib/modules/$$(uname -r)/build M=$$(pwd) modules
 
 clean:
