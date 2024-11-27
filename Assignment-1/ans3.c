@@ -14,7 +14,7 @@ static int __init list_modules_init(void)
 
    
     list_for_each_entry(mod, THIS_MODULE->list.prev, list) {
-        printk(KERN_INFO "Module: %s, Size: %u, State: %s\n", mod->name,mod->core_size,mod->state == MODULE_STATE_LIVE ?"LIVE": mod->state == MODULE_STATE_COMING ? "COMING" : mod->state == MODULE_STATE_GOING ? "GOING" : "UNKNOWN");
+        printk(KERN_INFO "Module: %s, Size: %u, State: %s\n", mod->name,mod->data_size,mod->state == MODULE_STATE_LIVE ?"LIVE": mod->state == MODULE_STATE_COMING ? "COMING" : mod->state == MODULE_STATE_GOING ? "GOING" : "UNKNOWN");
     }
 
     return 0;
