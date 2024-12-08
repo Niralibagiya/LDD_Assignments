@@ -11,7 +11,10 @@ typedef struct devinfo {
 
 #define FIFO_CLEAR      _IO('x', 1)
 #define FIFO_GETINFO    _IOR('x', 2, devinfo_t)
-//FIFO_RESIZE
+#define FIFO_RESIZE	_IOW('x', 3, long)
+#define FIFO_START_TIMER 	100
+#define FIFO_STOP_TIMER 	101
+#define MAX 	32
 
 #endif
 

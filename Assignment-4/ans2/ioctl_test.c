@@ -29,7 +29,10 @@ int main(int argc, char *argv[]) {
             printf("Device FIFO info:\n\tsize = %d, len = %d, avail = %d\n", info.size, info.len, info.avail);
     }
     else if(strcmp(argv[1], "RESIZE") == 0) {
-        // ... Assignment
+    devinfo_t info;
+       	ret = ioctl(fd,FIFO_RESIZE,&info);
+       	if(ret == 0)
+       		printf("device resized");
     }
     else
         printf("ERROR: Invalid command.\n");
